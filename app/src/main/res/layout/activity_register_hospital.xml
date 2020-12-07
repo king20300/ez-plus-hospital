@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3CD05"
+    tools:context=".register.RegisterHospitalActivity">
+
+    <Button
+        android:id="@+id/select_date_btn"
+        android:layout_width="111dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/common_btn"
+        android:text="選擇預約日期"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/selected_date"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/list_design"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/select_date_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/select_date_btn"
+        app:layout_constraintTop_toTopOf="@+id/select_date_btn" />
+
+    <Button
+        android:id="@+id/select_time_btn"
+        android:layout_width="111dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/common_btn"
+        android:text="選擇預約時間"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_date_btn" />
+
+    <TextView
+        android:id="@+id/selected_time"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/list_design"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/select_time_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/select_time_btn"
+        app:layout_constraintTop_toTopOf="@+id/select_time_btn" />
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="111dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/common_btn"
+        android:text="確認預約"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selected_time" />
+
+    <Spinner
+        android:id="@+id/division_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selected_time" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="85dp"
+        app:layout_constraintBottom_toTopOf="@+id/division_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_time_btn">
+
+        <RadioButton
+            android:id="@+id/option_surgical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="外科"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="348dp" />
+
+        <RadioButton
+            android:id="@+id/option_medical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="內科"
+            tools:layout_editor_absoluteX="193dp"
+            tools:layout_editor_absoluteY="361dp" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_for_register_hospital"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/register_hospital_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="預約通知"
+        android:textColor="#333"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
